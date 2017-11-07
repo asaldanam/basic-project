@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i')
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i')
+
+//Fonts
+$font-main: 'Raleway', sans-serif
+$font-sec: 'Source Sans Pro', sans-serif
+
+//Colors
+$main-color: grey
+$sec-color: grey
+$alt-color: grey
+
+
+//sass framework
+@import "grilla/grilla"
+
+
+//development
+
+.dev-breaks
+  position: fixed
+  z-index: 9999
+  background-color: transparentize(black, 0.5)
+  left: 0
+  top: 0
+  padding: 5px
+  color: white
+  font-size: 12px
+
+  @media (min-width: $xl + 1)
+    &::after
+      content: 'xl+'
+
+  @media (max-width: $xl)
+    &::after
+      content: 'xl'
+
+  @media (max-width: $lg)
+    &::after
+      content: 'lg'
+
+  @media (max-width: $md)
+    &::after
+      content: 'md'
+
+  @media (max-width: $sm)
+    &::after
+      content: 'sm'
+
+  @media (max-width: $xs)
+    &::after
+      content: 'xs'
